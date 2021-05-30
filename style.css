@@ -24,10 +24,194 @@ body {
 }
 
 .obal {
-    width: 960px; /* obsah stránky je omezený do pruhu širokého 960px */
+    max-width: 960px; /* obsah stránky je omezený do pruhu širokého 960px */
     margin: 0 auto; /* pruh je na stránce vycentrovaný */
     background: white;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 /* ----- zde začni psát vlastní CSS ----- */
+
+/*---hlavička---*/
+
+.hlavicka {
+  display: flex;
+  align-items: center;
+  flex-wrap:wrap;
+  justify-content: center;
+}
+
+.main {
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  color: #48418e;
+  padding: 1rem;
+  text-overflow: inherit;
+}
+
+
+
+/*---hero blok---*/
+
+.hero-block {
+  display: flex;
+  flex-direction: column;
+  background: rgb(37,19,61);
+  background: linear-gradient(150deg, rgba(37,19,61,1) 0%, rgba(76,65,141,1) 25%, rgba(83,65,140,1) 36%, rgba(86,65,139,1) 40%, rgba(95,65,137,1) 46%, rgba(108,66,135,1) 52%, rgba(149,67,127,1) 63%, rgba(157,67,126,1) 68%, rgba(164,67,124,1) 73%, rgba(178,68,122,1) 78%, rgba(191,68,119,1) 83%, rgba(220,69,113,1) 91%, rgba(252,70,107,1) 100%);
+}
+
+.hero-block p {
+  color: white;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 20px;
+  font-weight: 100;
+}
+
+h1 {
+  font-size: 32px;
+  color: #e5e5e5;
+  font-weight: 500;
+  padding-left: 1rem;
+}
+
+h2 {
+  color: #48418e;
+}
+
+.sub-headline p {
+  text-align: left;
+}
+
+.hero-buttony {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1rem;
+}
+
+.hero-block a {
+  color: white;
+  font-weight: 100;
+  border-color: e5e5e5;
+  border-radius: 7px;
+  text-align: center;
+  background-color: transparent;
+  margin: 0.5rem 1rem 0.5rem 1rem;
+  border-style: solid;
+  border-width: 1px;
+  font-size: 16px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.hero-block a:hover,
+.hero-block a:focus {
+  background-color: #48418e;
+}
+
+.telefon {
+  display: none;
+}
+/*---obsah---*/
+
+.sekce {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+p{
+  text-align: center;
+}
+
+/*---footer---*/
+
+footer {
+  background-color: #48418e;
+  display: flex;
+  justify-content: center;
+}
+
+footer p{
+  color: #e5e5e5;
+}
+
+
+/*---min-width 520 px---*/
+
+@media screen and (min-width: 520px) and (max-width: 713px) {
+  .hlavicka {
+    justify-content: left;
+  }
+
+  .main-content {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .hero-buttony {
+    flex-direction: row;
+  }
+
+  .hero-block p {
+    text-align: left;
+  }
+
+  h1 { 
+    font-size: 48px;
+    margin: 8px;
+  }
+
+  .sekce h2{ 
+    font-size: 20px;
+    text-align: center;
+  }
+}
+
+/*---min-width 714 px---*/
+
+@media screen  and (min-width: 714px) {
+  .hlavicka {
+    justify-content: left;
+  }
+
+  .main-content {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .hero-buttony {
+    flex-direction: row;
+  }
+
+  .hero-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-image: url(images/pozadi.jpg);
+    background-size: cover;
+  }
+
+  .hero-block p {
+    text-align: left;
+  }
+
+  h1 { 
+    font-size: 48px;
+    margin: 8px;
+  }
+
+  .sekce h2{ 
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .telefon {
+    display: flex;
+    padding-top: 2rem;
+  }
+  
+}
